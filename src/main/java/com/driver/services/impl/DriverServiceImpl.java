@@ -53,6 +53,7 @@ public class DriverServiceImpl implements DriverService {
 		if(driver.isPresent()){
 			Driver driver2=driver.get();
 			driver2.getCab().setAvailable(false);
+			driverRepository3.save(driver2);
 		}
 
 	}
