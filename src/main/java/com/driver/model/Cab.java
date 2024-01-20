@@ -28,7 +28,7 @@ public class Cab{
     public void setPerKmRate(int perKmRate) {
         this.perKmRate = perKmRate;
     }
-    public boolean isAvailable() {
+    public boolean getAvailable() {
         return available;
     }
     public void setAvailable(boolean available) {

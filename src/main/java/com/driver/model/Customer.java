@@ -28,6 +28,8 @@ public class Customer {
         this.password = password;
         this.tripBookingList = tripBookingList;
     }
+    public Customer() {
+    }
     public int getCustomerId() {
         return customerId;
     }
