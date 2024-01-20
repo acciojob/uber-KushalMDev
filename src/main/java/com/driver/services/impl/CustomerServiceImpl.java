@@ -64,8 +64,9 @@ public class CustomerServiceImpl implements CustomerService {
 			throw new Exception("No cab available!");
 		} else {
 			TripBooking tripBooking = new TripBooking();
-			Optional<Driver> driver = driverRepository2.findById(min);
-			if(driver.isEmpty())return null;
+			Optional<Driver> optional = driverRepository2.findById(min);
+			if(optional.isEmpty())return null;
+			Driver driver=optional.get();
 			driver.getCab().setAvailable(false);
 			int kmperrate = driver.getCab().getPerKmRate();
 			int totalCost = distanceInKm * kmperrate;
